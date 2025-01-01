@@ -1,0 +1,311 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header Styling */
+header {
+    background: #07bcf9;
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+header a:hover {
+    color: #ff6347;
+}
+
+/* Section Styling */
+.section {
+    padding: 50px;
+    text-align: center;
+}
+
+.home {
+    background-color: #0b0e0b;
+    color: white;
+    text-align: center;
+}
+
+.home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.home p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Match the width for a perfect circle */
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover; /* Ensures the image scales proportionally within the circle */
+    border: 5px solid #ff6347; /* Optional: Add a border for an Instagram-style look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+    transition: transform 0.3s ease-in-out; /* Smooth animation for hover effect */
+}
+
+.profile-picture:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #ff6347;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #effc02;
+    transform: scale(1.05);
+}
+
+/* Common Section Background */
+.about, .portfolio, .linkedin, .certificates, .contact {
+    background-color: rgb(14, 241, 215);
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.about p, .portfolio p, .linkedin p, .certificates p {
+    margin: 20px 0;
+    font-size: 1rem;
+}
+
+.portfolio .projects, .certificate-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Project and Certificate Cards */
+.project, .certificate {
+    background: #a1e601;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover, .certificate:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.project h3, .certificate h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project a, .certificate a {
+    color: #ff6347;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.project a:hover, .certificate a:hover {
+    color: #333;
+}
+/* Certificate Slider Container */
+.certificate-slider {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Adjust height as needed */
+    overflow: hidden; /* Hide overflowed images */
+    margin-bottom: 20px;
+}
+
+/* Certificates list (as a flex container) */
+.certificate-list {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    transition: transform 1s ease-in-out; /* Smooth transition */
+}
+
+/* Certificate image styling */
+.certificate-list img {
+    width: 400px; /* Width of each image */
+    height: 300px; /* Height of each image */
+    object-fit: cover; /* Crop and scale images */
+    margin-bottom: 20px; /* Space between images */
+    border-radius: 8px;
+}
+
+/* Slider Buttons */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 10px; /* Position left button */
+}
+
+.next {
+    right: 10px; /* Position right button */
+}
+
+/* Skills List */
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills ul li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Contact Section */
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.linkedin img {
+    width: 40%; /* Adjust size to your preference */
+    height: 80%; /* Ensure height matches width */
+    border-radius: 10%; /* Optional: Slightly rounded corners */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth animation */
+}
+
+.linkedin img:hover {
+    transform: scale(1.2); /* Zoom in slightly */
+    filter: grayscale(0%); /* Restore full color on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #fb1212;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact form button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact form button:hover {
+    background-color: #ff4500;
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+/* Scroll to Top Button */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #ff4500;
+    transform: scale(1.1);
+}
+
+/* Button Visibility */
+body.onscroll {
+    let button = document.getElementById('scrollToTopBtn');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .portfolio .projects, .certificate-list {
+        flex-direction: column;
+    }
+
+    .cta-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
